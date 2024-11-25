@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page with Footer</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       display: grid;
       grid-template-rows: 1fr auto;
       min-height: 100vh;
+      margin: 0;
+      padding: 10px;
     }
   </style>
 </head>
@@ -24,10 +29,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page with Footer</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         display: grid;
         grid-template-rows: 1fr auto;
         min-height: 100vh;
+        margin: 0;
+        padding: 10px;
       }
     </style>
   </head>
@@ -39,11 +49,11 @@
     <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
-</xmp>
-  <p>Looks great... except the footer gets cut off. No problem, let's just...</p>
-  <p><a href="/example02.html"><code>git commit -am "Remove the margin, add padding, apply box-sizing everywhere"</code></a></p>
+    </xmp>
+    <p>Nope, that didn't fix it. The footer is still cut off on mobile.</p>
+    <p><a href="/example03.html"><code>git commit -am "Add padding-bottom: env(safe-area-inset-bottom)"</a></code></p>
     </aside>
-</div>
+  </div>
   <footer>&copy; 2024 Ian J. MacIntosh</footer>
 </body>
 </html>

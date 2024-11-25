@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page with Footer</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       display: grid;
       grid-template-rows: 1fr auto;
       min-height: 100vh;
+      margin: 0;
+      padding: 10px;
     }
   </style>
 </head>
@@ -24,10 +29,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page with Footer</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         display: grid;
         grid-template-rows: 1fr auto;
         min-height: 100vh;
+        margin: 0;
+        padding: 10px;
       }
     </style>
   </head>
@@ -39,11 +49,12 @@
     <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
-</xmp>
-  <p>Looks great... except the footer gets cut off. No problem, let's just...</p>
-  <p><a href="/example02.html"><code>git commit -am "Remove the margin, add padding, apply box-sizing everywhere"</code></a></p>
+    </xmp>
+    <p>And now we hit the tricky problem: everything looks fine on my computer, even when I view the page with Chrome DevTools in "Device Mode" to simulate a mobile screen.</p>
+    <p>But on real world mobile phones, the browser's UI on the bottom of the screen hides the footer. Thankfully Google has the answer, and it is...</p>
+    <p><a href="/example03.html"><code>git commit -am "Add padding-bottom: env(safe-area-inset-bottom)"</a></code></p>
     </aside>
-</div>
+  </div>
   <footer>&copy; 2024 Ian J. MacIntosh</footer>
 </body>
 </html>
