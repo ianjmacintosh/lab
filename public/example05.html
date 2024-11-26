@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Page with Footer</title>
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Page with Footer</title>
+    <style>
       * {
         box-sizing: border-box;
-      }  
+      }
 
       body {
         background: #fff;
@@ -16,11 +19,11 @@
         grid-template-rows: 1fr auto;
         min-height: 100dvh;
         margin: 0;
-      }  
+      }
 
-      .container { 
+      .container {
         padding: 10px;
-      }  
+      }
 
       footer {
         background: #000;
@@ -29,15 +32,14 @@
         padding: 10px;
         padding-bottom: calc(10px + env(safe-area-inset-bottom));
       }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <p>Hello, world!</p>
-    <aside>
-      
-      <details>
-        <summary>View Source</summary>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Hello, world!</p>
+      <aside>
+        <details>
+          <summary>View Source</summary>
           <xmp>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,15 +83,20 @@
   </body>
 </html>
           </xmp>
-      </details>
-    <p>Bam, payday.</p>
-    <p>I don't know why I didn't come across this solution first; it's clearly the most logical one.</p>
-    <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
-    <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
-    
-    <p><a href="/example05.html"><code>git push</code></a></p>
-    </aside>
-  </div>
-  <footer>&copy; 2024 Ian J. MacIntosh</footer>
-</body>
+        </details>
+        <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
+        <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
+        <p>Bam! Payday.</p>
+        <p>
+          I don't know why I didn't come across this solution first; it's
+          clearly the most logical one.
+        </p>
+
+        <p>
+          <a href="/example05.html"><code>git push</code></a>
+        </p>
+      </aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
 </html>

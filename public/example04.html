@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Page with Footer</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Page with Footer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      background: #fff;
-      color: #000;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      min-height: 100vh;
-      margin: 0;
-    }
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        margin: 0;
+      }
 
-    .container { 
-      padding: 10px;
-    }
+      .container {
+        padding: 10px;
+      }
 
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      padding-bottom: calc(10px + env(safe-area-inset-bottom));
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <p>Hello, world!</p>
-    <aside>
-      <details>
-        <summary>View Source</summary>
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Hello, world!</p>
+      <aside>
+        <details>
+          <summary>View Source</summary>
           <xmp>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,16 +83,43 @@
   </body>
 </html>
           </xmp>
-      </details>
-    <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
-    <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
-    <p>Welp, I guess we just have to live with it and if anyone asks, we'll need to explain how browsers get the last word in how they render our pages.</p>
-    <p>But wait a second, there's yet another solution. And this one actually makes sense: set the page height using <code>dvh</code> units.</p>
-    <p>"Device Viewport Height" is the height of the screen, minus the height of the browser chrome. It seems like browser authors have given us exactly what we want.</p>
-    
-    <p><a href="/example05.html"><code>git commit -am "Update the body `min-height` to `100dvh`"</a></code></p>
-    </aside>
-  </div>
-  <footer>&copy; 2024 Ian J. MacIntosh</footer>
-</body>
+        </details>
+        <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
+        <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
+        <p>
+          Welp, I guess we just have to live with it and if anyone asks, we'll
+          need to explain how browsers get the last word in how they render our
+          pages.
+        </p>
+        <p>
+          But wait a second, there's yet another solution. And this one actually
+          makes sense: set the page height using
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/length#vh"
+            target="_blank"
+            ><code>dvh</code> units</a
+          >.
+        </p>
+        <p>
+          "Device Viewport Height" is the height of the viewport, not including
+          the height of the browser chrome. (Source:
+          <a
+            href="https://drafts.csswg.org/css-values/#viewport-variants"
+            target="_blank"
+            >CSS Values and Units Module Level 4</a
+          >)
+        </p>
+        <p>It seems like browser authors have given us exactly what we want.</p>
+        <p>
+          <a href="/example05.html"
+            >Next:
+            <code
+              >git commit -am "Update the body `min-height` to `100dvh`"</code
+            ></a
+          >
+        </p>
+      </aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
 </html>

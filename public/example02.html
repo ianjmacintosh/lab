@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page with Footer</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page with Footer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      background: #fff;
-      color: #000;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      min-height: 100vh;
-      margin: 0;
-    }
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        margin: 0;
+      }
 
-    .container { 
-      padding: 10px;
-    }
+      .container {
+        padding: 10px;
+      }
 
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <p>Hello, world!</p>
-    <aside>
-      <details>
-        <summary>View Source</summary>
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Hello, world!</p>
+      <aside>
+        <details>
+          <summary>View Source</summary>
           <xmp>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,16 +78,38 @@
   </body>
 </html>
         </xmp>
-      </details>
-    <p>Nice, it looks perfect on my computer But on real world mobile phones, the browser's UI on the bottom of the screen hides the footer.</p>
-    <p>[SCREENSHOT OF SAFARI IOS HIDING THE FOOTER]</p>
-    <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID HIDING THE FOOTER]</p>
-    <p>And even worse, it looks fine when I view the page with Chrome DevTools in "Device Mode" to simulate a mobile screen. Testing a fix is going to require a real phone or an emulator.</p>
-    <p>Maybe we should respect each browser's authors' vision for how the viewport should work, and if they want to cover the page with their browser chrome, they get the final word.</p>
-    <p>But before I give up, I do some Googling and find an answer that involves introducing some exotic syntax I've never encountered:</p>
-    <p><a href="/example03.html"><code>git commit -am "Add `padding-bottom: calc(10px + env(safe-area-inset-bottom))`"</a></code></p>
-    </aside>
-  </div>
-  <footer>&copy; 2024 Ian J. MacIntosh</footer>
-</body>
+        </details>
+        <p>
+          Nice, it looks perfect on my computer, but when I check with my real
+          world mobile phone, the browser UI hides the footer.
+        </p>
+        <p>[SCREENSHOT OF SAFARI IOS HIDING THE FOOTER]</p>
+        <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID HIDING THE FOOTER]</p>
+        <p>
+          And even worse, I can't reproduce the same issue on my desktop because
+          it has a different UI. Testing a fix is going to require a real phone
+          or an emulator.
+        </p>
+        <p>
+          I do some Googling and find an answer that involves introducing some
+          exotic syntax I've never encountered:
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/env#using_env_to_ensure_buttons_are_not_obscured_by_device_ui"
+            target="_blank"
+            ><code>env(safe-area-inset-bottom)</code></a
+          >
+        </p>
+        <p>
+          <a href="/example03.html"
+            >Next:
+            <code
+              >git commit -am "Add `padding-bottom: calc(10px +
+              env(safe-area-inset-bottom))`"</code
+            ></a
+          >
+        </p>
+      </aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
 </html>
