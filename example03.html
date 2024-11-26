@@ -5,18 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page with Footer</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background: #fff;
       color: #000;
       display: grid;
       grid-template-rows: 1fr auto;
       min-height: 100vh;
+      margin: 0;
+    }
+
+    .container { 
+      padding: 10px;
     }
 
     footer {
       background: #000;
       color: #fff;
       text-align: center;
+      padding: 10px;
+      padding-bottom: calc(10px + env(safe-area-inset-bottom));
     }
   </style>
 </head>
@@ -30,25 +41,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page with Footer</title>
-    <style>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Page with Footer</title>  
+    <style>  
+      * {
+        box-sizing: border-box;
+      }  
+
       body {
         background: #fff;
         color: #000;
         display: grid;
         grid-template-rows: 1fr auto;
         min-height: 100vh;
-      }
-  
+        margin: 0;
+      }  
+
+      .container { 
+        padding: 10px;
+      }  
+
       footer {
         background: #000;
         color: #fff;
         text-align: center;
+        padding: 10px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
       }
     </style>
-  </head>
+  </head> 
   <body>
     <div class="container">
       <p>Hello, world!</p>
@@ -57,13 +79,15 @@
     <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
-        </xmp>
+          </xmp>
       </details>
-      
-  <p>Looks great... except the footer gets cut off. No problem, let's just...</p>
-  <p><a href="/example02.html"><code>git commit -am "Remove the margin, add padding, apply box-sizing everywhere"</code></a></p>
+    <p>Nope, that didn't fix it. The footer is still cut off on mobile.</p>
+    <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
+    <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
+    <p>Google offers another solution:</p>
+    <p><a href="/example04.html"><code>git commit -am "Update the meta viewport tag with `viewport-fit: cover`"</a></code></p>
     </aside>
-</div>
+  </div>
   <footer>&copy; 2024 Ian J. MacIntosh</footer>
 </body>
 </html>
