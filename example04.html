@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Page with Footer</title>
   <style>
     * {
@@ -40,7 +40,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Page with Footer</title>
     <style>
       * {
@@ -64,11 +64,13 @@
   </body>
 </html>
     </xmp>
-    <p>Nope, that didn't fix it. The footer is still cut off on mobile.</p>
+    <p>Welp, I guess we just have to live with it and if anyone asks, we'll need to explain how browsers get the last word in how they render our pages.</p>
+    <p>But wait a second, there's yet another solution. And this one actually makes sense: set the page height using <code>dvh</code> units.</p>
+    <p>"Device Viewport Height" is the height of the screen, minus the height of the browser chrome. It seems like browser authors have given us exactly what we want.</p>
     <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
     <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
-    <p>Google offers another solution:</p>
-    <p><a href="/example04.html"><code>git commit -am "Update the meta viewport tag with `viewport-fit: cover`"</a></code></p>
+    
+    <p><a href="/example05.html"><code>git commit -am "Update the body `min-height` to `100dvh`"</a></code></p>
     </aside>
   </div>
   <footer>&copy; 2024 Ian J. MacIntosh</footer>

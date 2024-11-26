@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Page with Footer</title>
   <style>
     * {
@@ -14,7 +14,7 @@
       color: #000;
       display: grid;
       grid-template-rows: 1fr auto;
-      min-height: 100vh;
+      min-height: 100dvh;
       margin: 0;
     }
 
@@ -35,12 +35,14 @@
   <div class="container">
     <p>Hello, world!</p>
     <aside>
-    <xmp>
+      <details>
+        <summary>View Source</summary>
+          <xmp>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Page with Footer</title>
     <style>
       * {
@@ -63,12 +65,14 @@
     <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
-    </xmp>
-    <p>Nope, that didn't fix it. The footer is still cut off on mobile.</p>
+        </xmp>
+      </details>
+    <p>Bam, payday.</p>
+    <p>I don't know why I didn't come across this solution first; it's clearly the most logical one.</p>
     <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
     <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
-    <p>Google offers another solution:</p>
-    <p><a href="/example04.html"><code>git commit -am "Update the meta viewport tag with `viewport-fit: cover`"</a></code></p>
+    
+    <p><a href="/example05.html"><code>git push</code></a></p>
     </aside>
   </div>
   <footer>&copy; 2024 Ian J. MacIntosh</footer>

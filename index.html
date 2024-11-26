@@ -6,12 +6,25 @@
   <title>What's this all about</title>
 </head>
 <body>
+  <h1>Showing a Footer on Mobile</h1>
+  <p>
+    The year is 2024, I'm adding a footer to a wicked simple page so it shows up on the bottom of the screen on desktop and mobile, and it's a lot harder than I expected.
+  </p>
+  <p>
+    If you're just looking for a solution: use <code>#page-content { min-height: 100dvh; }</code> <button>Copy to Clipboard</button> (<a href="example05.html">View live example</a>)
+  </p>
+  <p>
+    If you want to learn more, I'll show you some other approaches that didn't do what I had in mind.
+  </p>
+  <p>
+    These pages are best viewed on mobile so you can see for yourself how each change affects the page display, but I'll include some screenshots from iOS and Android anyway.
+  </p>
   <ul>
-    <li>Step 1: I'm a fancy boy; I'm using CSS grid (<code>rows: 1fr auto</code>) and <code>min-height: vh100</code> (<a href="example01.html">olhe isso</a>)</li>
-    <li>Step 2: Oops, the footer gets cut off. Remove the margin, add padding, apply box-sizing everywhere</li>
-    <li>Step 3: Oh Christ, on mobile the toolbar hides the footer. Google has the answer: add padding-bottom of <code>env(safe-area-inset-bottom)</code></li>
-    <li>Step 4: Surprise surprise, throwing random code at the problem doesn't solve it. But let's keep going with this strategy and throw a weird meta tag at it. <code>viewport-fit=cover</code></li>
-    <li>Step 5: Oh nm we have a CSS length unit that's perfect for this. The End!</li>
+    <li>Step 1: CSS grid (<code>rows: 1fr auto</code>) and <code>min-height: vh100</code> (<a href="example01.html">Live Example</a>)</li>
+    <li>Step 2: Remove the margin, add padding, apply box-sizing everywhere (<a href="example02.html">Live Example</a>)</li>
+    <li>Step 3: <code>padding-bottom: calc(10px + env(safe-area-inset-bottom)</code> (<a href="example03.html">Live Example</a>)</li>
+    <li>Step 4: Update the meta viewport tag with <code>viewport-fit=cover</code> (<a href="example04.html">Live Example</a>)</li>
+    <li>Step 5: Use <code>min-height: 100dvh</code> -- problem solved (<a href="example05.html">Live Example</a>)</li>
   </ul>
   <p>Don't forget to add page code!</p>
 </body>
