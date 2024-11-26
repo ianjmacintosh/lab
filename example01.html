@@ -24,7 +24,9 @@
   <div class="container">
     <p>Hello, world!</p>
     <aside>
-    <xmp>
+      <details>
+        <summary>View Source</summary>
+          <xmp>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,9 +35,17 @@
     <title>Page with Footer</title>
     <style>
       body {
+        background: #fff;
+        color: #000;
         display: grid;
         grid-template-rows: 1fr auto;
         min-height: 100vh;
+      }
+  
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
       }
     </style>
   </head>
@@ -47,7 +57,9 @@
     <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
-</xmp>
+        </xmp>
+      </details>
+      
   <p>Looks great... except the footer gets cut off. No problem, let's just...</p>
   <p><a href="/example02.html"><code>git commit -am "Remove the margin, add padding, apply box-sizing everywhere"</code></a></p>
     </aside>

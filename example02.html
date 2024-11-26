@@ -34,7 +34,9 @@
   <div class="container">
     <p>Hello, world!</p>
     <aside>
-    <xmp>
+      <details>
+        <summary>View Source</summary>
+          <xmp>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,11 +47,24 @@
       * {
         box-sizing: border-box;
       }
+  
       body {
+        background: #fff;
+        color: #000;
         display: grid;
         grid-template-rows: 1fr auto;
         min-height: 100vh;
         margin: 0;
+      }
+  
+      .container { 
+        padding: 10px;
+      }
+  
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
         padding: 10px;
       }
     </style>
@@ -62,13 +77,13 @@
     <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
-    </xmp>
-    <p>Nice. That's much better, and it looks perfect on my computer.</p>
-    <p></p>But on real world mobile phones, the browser's UI on the bottom of the screen hides the footer.</p>
+        </xmp>
+      </details>
+    <p>Nice, it looks perfect on my computer But on real world mobile phones, the browser's UI on the bottom of the screen hides the footer.</p>
     <p>[SCREENSHOT OF SAFARI IOS HIDING THE FOOTER]</p>
     <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID HIDING THE FOOTER]</p>
-    <p>Annoyingly, when I view the page with Chrome DevTools in "Device Mode" to simulate a mobile screen, it looks fine. This is a browser issue, so testing a fix is going to require a real phone (or an emulator.)</p>
-    <p>I begin philosophically musing about how maybe we should respect each browser's authors' vision for how the viewport should work. If they want to cover the page with their browser chrome, so be it.</p>
+    <p>And even worse, it looks fine when I view the page with Chrome DevTools in "Device Mode" to simulate a mobile screen. Testing a fix is going to require a real phone or an emulator.</p>
+    <p>Maybe we should respect each browser's authors' vision for how the viewport should work, and if they want to cover the page with their browser chrome, they get the final word.</p>
     <p>But before I give up, I do some Googling and find an answer that involves introducing some exotic syntax I've never encountered:</p>
     <p><a href="/example03.html"><code>git commit -am "Add `padding-bottom: calc(10px + env(safe-area-inset-bottom))`"</a></code></p>
     </aside>
