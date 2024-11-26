@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Attempt #2: Remove the margin, add padding, apply box-sizing everywhere
+    </title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Attempt #2: Remove the margin, add padding, apply box-sizing everywhere
+      </h1>
+      <p>Hello, world!</p>
+      <aside>
+        <details>
+          <summary>View Source</summary>
+          <xmp>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attempt #2: Remove the margin, add padding, apply box-sizing everywhere</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+  
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        margin: 0;
+      }
+  
+      .container { 
+        padding: 10px;
+      }
+  
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Attempt #2: Remove the margin, add padding, apply box-sizing everywhere</h1>
+      <p>Hello, world!</p>
+      <aside><!-- My commentary goes here --></aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
+</html>
+        </xmp>
+        </details>
+        <details>
+          <summary>My Commentary</summary>
+          <p>
+            Nice, it looks perfect on my computer, but when I check with my
+            phone, the browser UI hides the footer.
+          </p>
+          <p>
+            <figure>
+              <video
+                height="200"
+                width="90"
+                autoplay="autoplay"
+                muted
+                autoplay
+                loop
+                controls
+              >
+                <source src="/attempt02-android.mp4" type="video/mp4" /></video
+              ><br />
+              <figcaption>
+                Here's a video of me scrolling up and down to show and hide the
+                footer on my phone (Brave 1.73.91 on Android 15; Google Pixel 7)
+                (<a href="/attempt02-android.mp4">Open</a>)
+              </figcaption>
+            </figure>
+          </p>
+          <p>
+            And even worse, testing a fix is going to require a real phone or an
+            emulator, because I can't reproduce the same issue on my desktop.
+          </p>
+          <p>
+            I do some Googling and find a fix that involves introducing some
+            exotic syntax I've never encountered:
+            <code>env(safe-area-inset-bottom)</code>
+            (<a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/env#using_env_to_ensure_buttons_are_not_obscured_by_device_ui"
+              target="_blank"
+              >MDN Docs</a
+            >)
+          </p>
+        </details>
+        <p>
+          <a href="/attempt03.html"
+            >Next:
+            <code
+              >git commit -am "Add `padding-bottom: calc(10px +
+              env(safe-area-inset-bottom))`"</code
+            ></a
+          >
+        </p>
+      </aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
+</html>

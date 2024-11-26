@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Attempt #5: Use min-height: 100dvh</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100dvh;
+        margin: 0;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Attempt #5: Use <code>min-height: 100dvh</code></h1>
+      <p>Hello, world!</p>
+      <aside>
+        <details>
+          <summary>View Source</summary>
+          <xmp>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">  
+    <title>Attempt #5: Use min-height: 100dvh</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }  
+
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100dvh;
+        margin: 0;
+      }  
+
+      .container { 
+        padding: 10px;
+      }  
+
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      }
+    </style>
+  </head> 
+  <body>
+    <div class="container">
+      <h1>Attempt #5: Use <code>min-height: 100dvh</code></h1>
+      <p>Hello, world!</p>
+      <aside><!-- My commentary goes here --></aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
+</html>
+          </xmp>
+        </details>
+        <details>
+          <summary>My Commentary</summary>
+          <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
+          <p>
+            [SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]
+          </p>
+          <p>Bam! Payday.</p>
+          <p>
+            To paraphrase the official spec (<a
+              href="https://drafts.csswg.org/css-values/#dynamic-viewport-size"
+              target="_blank"
+              >source</a
+            >), "Dynamic Viewport-Percentage Units" like <code>dvh</code> are
+            defined by the height of the viewport minus the browser UI, so
+            authors can make content <em>exactly</em> fit within the viewport --
+            whether browser doodads are visible or not.
+          </p>
+          <p>
+            I don't know why I didn't come across this solution first; it's
+            clearly the most logical one, but I'd never heard of it. Now you
+            have.
+          </p>
+        </details>
+
+        <p>
+          <a href="/attempt05.html"><code>git push</code></a>
+        </p>
+      </aside>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
+  </body>
+</html>

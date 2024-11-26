@@ -11,67 +11,92 @@
         navigator.clipboard.writeText(code);
       }
     </script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100dvh;
+        margin: 0;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      }
+    </style>
   </head>
   <body>
-    <h1>Showing a Footer on Mobile</h1>
-    <p>
-      I'm adding a footer to a wicked simple page. I want it to show up on the
-      bottom of the screen on desktop and mobile... and it's harder than
-      expected.
-    </p>
-    <p><u>If you're here just looking for the fix</u>:</p>
-    <p>
-      <textarea cols="80" rows="6">
+    <div class="container">
+      <h1>Showing a Footer on Mobile</h1>
+      <p>
+        I added a footer to a page and just wanted it to show up on the bottom
+        of the screen on desktop and mobile. Making that happens was harder than
+        expected.
+      </p>
+      <p><u>If you're here just looking for the fix</u>:</p>
+      <p>
+        <textarea cols="80" rows="6">
 body { min-height: 100dvh; }
 
 /* Now the <body> fills the whole viewport (minus the browser toolbar etc)
    and you can position your footer inside of it */
-      </textarea>
-      <br />
-      <button onclick="copyToClipboard('textarea')">Copy to Clipboard</button>
-      (<a href="example05.html">View live example</a>)
-    </p>
-    <p>
-      If you want to learn more, I'll show you some other approaches that didn't
-      do what I had in mind.
-    </p>
-    <p>
-      These pages are best viewed on mobile so you can see for yourself how each
-      change affects the page display, but I'll include some screenshots from
-      iOS and Android anyway.
-    </p>
-    <p>
-      <a href="example01.html">Let's go: CSS grid, 100vh, can't lose</a><br />
-    </p>
+      </textarea
+        >
+        <br />
+        <button onclick="copyToClipboard('textarea')">Copy to Clipboard</button>
+      </p>
+      <p>
+        If you want to learn more, I'll show you some other approaches that
+        didn't do what I had in mind.
+      </p>
+      <p>
+        These pages are best viewed on mobile so you can see for yourself how
+        each change affects the page display, but I'll include some screenshots
+        from iOS and Android anyway.
+      </p>
+      <p>
+        <a href="attempt01.html">Let's go: CSS grid, 100vh, can't lose</a><br />
+      </p>
 
-    <ul>
-      <li>
-        Attempt #1: CSS grid (<code>rows: 1fr auto</code>) and
-        <code>min-height: vh100</code> (<a href="example01.html"
-          >View live example</a
-        >)
-      </li>
-      <li>
-        Attempt #2: Remove the margin, add padding, apply box-sizing everywhere
-        (<a href="example02.html">View live example</a>)
-      </li>
-      <li>
-        Attempt #3:
-        <code>padding-bottom: calc(10px + env(safe-area-inset-bottom))</code>
-        (<a href="example03.html">View live example</a>)
-      </li>
-      <li>
-        Attempt #4: Update the meta viewport tag with
-        <code>viewport-fit=cover</code> (<a href="example04.html"
-          >View live example</a
-        >)
-      </li>
-      <li>
-        Attempt #5: Use <code>min-height: 100dvh</code> -- Success! (<a
-          href="example05.html"
-          >View live example</a
-        >)
-      </li>
-    </ul>
+      <ul>
+        <li>
+          Attempt #1: CSS grid (<code>rows: 1fr auto</code>) and
+          <code>min-height: vh100</code> (<a href="attempt01.html">View</a>)
+        </li>
+        <li>
+          Attempt #2: Remove the margin, add padding, apply box-sizing
+          everywhere (<a href="attempt02.html">View</a>)
+        </li>
+        <li>
+          Attempt #3:
+          <code>padding-bottom: calc(10px + env(safe-area-inset-bottom))</code>
+          (<a href="attempt03.html">View</a>)
+        </li>
+        <li>
+          Attempt #4: Update the meta viewport tag with
+          <code>viewport-fit=cover</code> (<a href="attempt04.html">View</a>)
+        </li>
+        <li>
+          Attempt #5: Use <code>min-height: 100dvh</code> (<a
+            href="attempt05.html"
+            >View</a
+          >)
+        </li>
+      </ul>
+    </div>
+    <footer>&copy; 2024 Ian J. MacIntosh</footer>
   </body>
 </html>
