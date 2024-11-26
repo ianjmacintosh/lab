@@ -120,23 +120,15 @@
           <p>
             But wait a second, there's yet another solution. And this one
             actually makes sense: set the page height using
-            <a
+            <code>dvh</code> units (<a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/length#vh"
               target="_blank"
-              ><code>dvh</code> units</a
-            >.
-          </p>
-          <p>
-            "Device Viewport Height" is the height of the viewport, not
-            including the height of the browser chrome. (Source:
-            <a
-              href="https://drafts.csswg.org/css-values/#viewport-variants"
-              target="_blank"
-              >CSS Values and Units Module Level 4</a
+              >MDN Docs</a
             >)
           </p>
           <p>
-            It seems like browser authors have given us exactly what we want.
+            It seems like exactly what we want: a unit of measure that considers
+            browser chrome.
           </p>
         </details>
         <p>
