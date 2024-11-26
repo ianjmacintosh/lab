@@ -84,32 +84,54 @@
 </html>
           </xmp>
         </details>
-        <p>[SCREENSHOT OF SAFARI IOS STILL HIDING THE FOOTER]</p>
-        <p>[SCREENSHOT OF BRAVE BROWSER ON ANDROID STILL HIDING THE FOOTER]</p>
-        <p>
-          Welp, I guess we just have to live with it and if anyone asks, we'll
-          need to explain how browsers get the last word in how they render our
-          pages.
-        </p>
-        <p>
-          But wait a second, there's yet another solution. And this one actually
-          makes sense: set the page height using
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/length#vh"
-            target="_blank"
-            ><code>dvh</code> units</a
-          >.
-        </p>
-        <p>
-          "Device Viewport Height" is the height of the viewport, not including
-          the height of the browser chrome. (Source:
-          <a
-            href="https://drafts.csswg.org/css-values/#viewport-variants"
-            target="_blank"
-            >CSS Values and Units Module Level 4</a
-          >)
-        </p>
-        <p>It seems like browser authors have given us exactly what we want.</p>
+        <details>
+          <summary>My Commentary</summary>
+          <p>
+            <figure>
+              <video
+                height="200"
+                width="90"
+                autoplay="autoplay"
+                muted
+                autoplay
+                loop
+                controls
+              >
+                <source src="/example04-android.mp4" type="video/mp4" /></video
+              ><br />
+              <figcaption>
+                Here's a video of me scrolling up and down to show and hide the
+                footer on my phone (Brave 1.73.91 on Android 15; Google Pixel 7)
+                (<a href="/example04-android.mp4">Open</a>)
+              </figcaption>
+            </figure>
+          </p>
+          <p>
+            Welp, I guess we just have to live with it and if anyone asks, I'll
+            need to explain that browsers get the last word on how pages render.
+          </p>
+          <p>
+            But wait a second, there's yet another solution. And this one
+            actually makes sense: set the page height using
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/length#vh"
+              target="_blank"
+              ><code>dvh</code> units</a
+            >.
+          </p>
+          <p>
+            "Device Viewport Height" is the height of the viewport, not
+            including the height of the browser chrome. (Source:
+            <a
+              href="https://drafts.csswg.org/css-values/#viewport-variants"
+              target="_blank"
+              >CSS Values and Units Module Level 4</a
+            >)
+          </p>
+          <p>
+            It seems like browser authors have given us exactly what we want.
+          </p>
+        </details>
         <p>
           <a href="/example05.html"
             >Next:
